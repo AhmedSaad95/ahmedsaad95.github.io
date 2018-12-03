@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Contrail+One')
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+	padding: 0px;
+	margin: 0px;
+
+}
+body {
+	margin: 0px !important;
+}
+.clearfix { clear: both; }
+
+/** BEGIN **/
+header {
+    height: 864px;
+    width: 100%;
+ /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background-image: -webkit-linear-gradient(90deg, #62e0fc 0%, #5935ad9e 100%);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header nav h1 {
+	font-family: 'Lato',cursive;
+	float: left;
+	color: white;
+	font-size: 45px;
+	font-weight: 600;
+}
+.navtop {
+	list-style: none;
+	text-decoration: none;
+}
+.navtop  li {
+	float: right;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 15px;
+	border-radius: 20px;
+}
+.navtop  li a {
+	text-decoration: none;
+	color: blue;
+	display: block !important;
+	color: blue;
+	font-family: 'Contrail One', cursive;
+	padding: 0px 15px;
+	position: relative;
+    top: 6px;
+    margin-left: 14px;
+}
+.navtop  li:hover > a:hover{
+	background-color: #bbe7fb;
+    border-radius: 80px;
+}
+.navtop  li ul li {
+	display: none;
+	line-height: 15px;
+    margin-right: -6px;
+    position: relative;
+    top: 6px;
+}
+.navtop li:hover > ul li {
+	display: block;
+}
+.navtop li:hover > .sub1:active{
+	display: block;
+}
+
+.sub {
+	font-size: 12.5px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 31px !important;
+    background: #fff;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.31);
+    border-radius: 99px;
+    width: 63px;
+    height: 33px;
+    line-height: 34px;
+    font-family: 'Lato', sans-serif;
+    color: #2842d6eb !important;
+
+}
+nav {
+	padding: 16px 28px;
+}
+nav img {
+	width: 13.5%;
+    height: 13.5%;
+    display: inline-block;
+    float: right;
+    box-shadow: 0px 0px 11px 10px rgba(0, 0, 0, 0.31);
+    border-radius: 84px;
+}
+
+.btn_special {
+
+    padding: 6px 25px !important;
+    background: #fff;
+    border-radius: 99px;
+    font-size: 12.5px;
+    margin: 0px 35px;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.31);
+    margin: 30px 0px;
+    text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	position: relative;
+    top: -30px !important;
+
+}
+.clr1{
+    color: #3e2a58;
+    padding: 6px 25px !important;
+    background: #fff;
+    border-radius: 34px;
+    font-size: 25.5px;
+    margin: 0px 35px;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.31);
+    margin: 48px 10px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    top: 40px !important;
+    left: 230px;
+    
+}
+.clr1:hover{
+	border: 1px solid #fff;
+    background: #5d6ded;
+    color: #fff;
+    font-weight: 600;
+}
+.container {
+    margin: 29px 226px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: white;
+}
+.container h1 {
+	text-align: center;
+}
+.container p {
+	font-size: 16px;
+    text-align: center;
+}
+.fa-chart-bar:before {
+    content: "\f080";
+    display: inline-block;
+    font-size: 421px;
+    height: 212px;
+    margin: 45px 10px;
+}
+.fa-adn:before {
+    content: "\f170";
+    color: #201e3e;
+    margin: 33px;
+}
+.fa-linkedin:before {
+    content: "\f08c";
+    color: #201e3e;
+    margin: 33px;
+}
+.fa-envelope:before {
+    content: "\f0e0";
+    color: #201e3e;
+    margin: 33px;
+}
+.fa-github:before {
+    content: "\f09b";
+    color: #201e3e;
+}
+.fa-facebook-square:before {
+    content: "\f082";
+    color: #201e3e;
+
+}
+
+.logo {
+	font-size: 48px;
+    text-align: center;
+    position: relative;
+    margin: 300px;
+
+}
+.contact {
+    font-size: 26px;
+    color: #201e3e;
+    background: #cecbd6;
+    border-radius: 59px;
+    margin: 32px 273px;
+}
+.fa-facebook-square:hover{
+	font-size: 70px;
+}
+.fa-adn:hover {
+	font-size: 70px;
+}
+.fa-linkedin:hover {
+	font-size: 70px;
+}
+.fa-envelope:hover {
+	font-size: 70px;
+}
+.fa-github:hover {
+	font-size: 70px;
+}
+.main_wrapper {
+	text-align: center;
+	font-family: 'Open Sans' , sans-serif;
+	font-size: 12px;
+}
+body div p {
+	font-size: 11px;
+	font-family: 'Lato' , sans-serif;
+}
+.main_wrapper {
+	padding: 50px 0px;
+}
+.main_wrapper p {
+	 color:#adad85;
+}
+
+.container1 {
+	width: 80%;
+	margin: 0px auto;
+}
+.left-aligned {
+	font-family: 'Open Sans' , sans-serif;
+	font-size: 15px;
+	width:  calc(33% - 30px);
+	float: left;
+	padding: 0px 15px;
+	display: inline-block !important;
+	text-align: center;
+	margin: 50px 0px;
+}
+.left-aligned h1 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.left-aligned p {
+	color:  #adad85;
+}
+.left-aligned span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	background: #6bbde7;
+	border-radius: 99px;
+	color: #fff;
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+.style1 {
+	font-family: 'Lato' , sans-serif;
+	display: block;
+}
+.container2{
+	margin-top: 200px;
+}
+.container2 h2 {
+	margin: 12px;
+}
+.container2 p{
+    margin: 0px 220px;
+    font-size: 12px;
+    color:  #adad85;
+
+}

@@ -1,0 +1,27 @@
+---
+output: html_document
+toc_float: true
+---
+
+<style> 
+  #header { 
+    color: red;
+    text-align: center;
+  }
+
+  h3 {
+    color: DodgerBlue;
+    Font-Weight: Bold;
+  }
+  .section h3 {
+    padding-top: 56px;
+    margin-top: -56px;
+    font-weight: 600;
+}
+</style>
+
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+
+
+### This section contains my projects during my three-year in the Higher School of Statistics and Data Analysis of Tunis (ESSAIT) 

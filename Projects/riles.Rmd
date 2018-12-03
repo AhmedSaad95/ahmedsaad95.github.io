@@ -1,0 +1,110 @@
+---
+title: "Riles lyrics : Word Cloud"
+output: 
+  html_document: 
+    toc: yes
+    toc_float: yes
+    
+---
+
+<style> 
+  #header { 
+    color: DodgerBlue;
+    text-align: center;
+  }
+
+  h3 {
+    color: DodgerBlue;
+    Font-Weight: Bold;
+  }
+</style>
+
+```{r setup, include=FALSE}
+library(plyr)
+library(dplyr)
+library(stringr)
+library(readxl)
+library(plotly)
+library(tm)
+library(DT)
+library(wordcloud)
+
+db <- read_excel("data/data_riles.xlsx")
+db<-db[-12,]
+db$length <- 1
+for(i in 1: 11){
+  l <- sapply(strsplit(as.character(db[i,2]), " "), length)
+  db[i,3]<-l
+}
+```
+
+### Introduction
+
+Since I’m fan of Riles and his songs, I came with an idea to better understand his lyrics which is collecting data (songs’ names, lyrics) from [this website](https://www.paroles-musique.com/) and analysing them using word cloud.
+
+**Word clouds** are used to visualize language and word frequency. A word cloud will use size, color, and position to accent words that are more frequent in a given text. They are a qualitative visualization that can be produced from text analysis.
+
+### Who's Riles ?
+Rilès Kacimi  , born 4 January 1996, better known by his stage name Rilès, is a French **rapper**, **songwriter**, **composer** and **record producer** from Rouen.
+
+All his songs are written in English, thanks to his advanced level in this language after studuing English literature at the University of Rouen.
+
+![Riles](image/r.jpg){width=250px}
+
+
+### Song's length:
+I created a variable **length** that containes the number of words per song and I ploted it:
+
+```{r plot,warning=FALSE}
+plot_ly(
+  x = db$songs,
+  y = db$length,
+  name = "Length per song",
+  type = "bar"
+)%>%
+  layout(title = "Number of words per song",
+         xaxis = list(title = "song"),
+         yaxis = list(title = "Number of words"))
+```
+
+
+
+
+### Words frequency table:
+
+You can also see rhe words frequency here :
+
+```{r words}
+texts <- db$lyrics
+corpus <- Corpus(VectorSource(texts))
+corpus <- tm_map(corpus, PlainTextDocument)
+corpus <- tm_map(corpus, removePunctuation)
+corpus <- tm_map(corpus, removeWords, stopwords('english'))
+corpus <- tm_map(corpus, stemDocument)
+corpus <- tm_map(corpus, removeWords, c("and", "this", "there")) 
+corpus <- Corpus(VectorSource(corpus))
+dtm <- TermDocumentMatrix(corpus)
+m <- as.matrix(dtm)
+v <- sort(rowSums(m),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+d <- d[-which(d$word %in% c("and","this","that","fuck","shit")),]
+datatable(d,class='compact',options = list(
+  initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+    "}")
+))
+set.seed(1234)
+```
+
+
+
+### Word Cloud
+
+
+```{r wordcloud}
+
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
+```

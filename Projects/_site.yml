@@ -1,0 +1,32 @@
+name: Ahmed Saad
+output_dir: '.'
+navbar:
+  title: Projects
+  type: inverse
+  left:
+  - text: Home
+    icon: fa-home
+    href: https://ahmedsaad95.github.io/
+  - text: Shiny Apps
+    menu:
+    - text: Credit Score Analysis
+      icon: far fa-chart-bar
+      href: credit.html
+    - text: Taxi App
+      icon: fas fa-taxi
+      href: taxi.html
+  - text: JAVA App
+    href: java.html
+  - text: HealthCare MAP
+    icon: fas fa-medkit
+    href: map.html
+  - text: Text_mining (Riles)
+    icon: fas fa-music
+    href: riles.html  
+output:
+  html_document:
+    highlight: textmate
+    css: styles.css
+    lib_dir: site_libs
+    self_contained: no
+

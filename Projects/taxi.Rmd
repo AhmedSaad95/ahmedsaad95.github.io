@@ -1,0 +1,32 @@
+---
+title: "Taxi App"
+output: html_document
+---
+
+<style> 
+  #header { 
+    color: DodgerBlue;
+    text-align: center;
+  }
+
+  h3 {
+    color: DodgerBlue;
+    Font-Weight: Bold;
+  }
+</style>
+
+### Description
+
+- Automated various data analysis techniques for a taxi reservation
+company.
+- Developed a Shiny application to encompass those techniques and
+provide key insights.
+
+### Tools used 
+R / Shiny / Plotly / SQL / Excel.
+
+### Code Source
+...
+
+### Application 
+<iframe src=" https://ahmedsaad.shinyapps.io/taxi_app/" height="650" width="120%" frameBorder="0"></iframe>

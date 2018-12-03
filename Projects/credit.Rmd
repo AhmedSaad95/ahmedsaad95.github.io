@@ -1,0 +1,35 @@
+---
+title: "Credit Score Analysis"
+output: html_document
+---
+
+<style> 
+  #header { 
+    color: DodgerBlue;
+    text-align: center;
+  }
+
+  h3 {
+    color: DodgerBlue;
+    Font-Weight: Bold;
+  }
+</style>
+
+### Description
+
+- Implemented a variety of techniques to analyze credit risk data.
+
+- Performed model selection between Logistic Regression (Logit),
+Decision Trees and Neural Networks.
+
+- Developed a Shiny app to present the results.
+
+### Tools used
+
+R, Shiny, Plotly
+
+### Code Source
+...
+
+### Application 
+<iframe src=" https://ahmedsaad.shinyapps.io/app-credit/" height="650" width="120%" frameBorder="0"></iframe>
