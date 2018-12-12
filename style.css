@@ -111,6 +111,9 @@ nav img {
     top: -30px !important;
 
 }
+.btn_holder {
+    text-align: center;
+}
 .clr1{
     color: #3e2a58;
     padding: 6px 25px !important;
@@ -124,7 +127,6 @@ nav img {
     font-family: 'Lato', sans-serif;
     position: relative;
     top: 40px !important;
-    left: 230px;
     
 }
 .clr1:hover{
@@ -270,4 +272,54 @@ body div p {
     font-size: 12px;
     color:  #adad85;
 
+}
+.snav li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+}
+@media(max-width:980px){
+    .logo {
+        margin: 100px!important;
+        top: 204px;
+    }
+    .container {
+        margin: 29px 100px;
+    }
+}
+@media(max-width:720px){
+    .clr1{
+        font-size: 16px;
+    }
+    .snav li a{
+        font-size: 18px;
+     }
+    .contact{
+        font-size: 22px;
+    }
+}
+@media(max-width:520px){
+    .clr1{
+        font-size: 8px;
+    }
+    h1{
+        font-size: 22.5px!important;
+    }
+    p{
+        font-size: 13px!important;
+    }
+    .contact {
+    font-size: 17px!important;
+    margin: -22px 18px;
+    }
+    .left-aligned h1 {
+        font-size: 14.5px!important;
+    }
+    .snav li a {
+    }
+    .sicon {
+        margin: 30px -26px!important;
+        width: 44%;
+    }
 }
