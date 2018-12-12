@@ -26,4 +26,4 @@ toc_float: true
 
 ### This section contains my projects during my three-year in the Higher School of Statistics and Data Analysis of Tunis (ESSAIT) 
 
-![Riles](image/r.jpg){width=250px}
+![](image/img.png){width=250px}
