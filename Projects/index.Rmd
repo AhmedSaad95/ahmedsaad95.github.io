@@ -26,6 +26,5 @@ toc_float: true
 
 ### This section contains my projects during my three-year in the Higher School of Statistics and Data Analysis of Tunis (ESSAIT) 
 
-<div id="bg"> 
-    <img src="image/img.png" alt=""> 
-</div> 
+![](image/img.png)
+
